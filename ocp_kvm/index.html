@@ -66,6 +66,16 @@
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">OCP4-UPI-KVM</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pre-requisites">Pre-requisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#image-and-vm-requirements">Image and VM requirements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ocp-install">OCP Install</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#contributing">Contributing</a>
+    </li>
     </ul>
                     </li>
                 </ul>
@@ -125,7 +135,7 @@
 <li><a href="#ocp-install">OCP Install</a></li>
 <li><a href="#contributing">Contributing</a></li>
 </ul>
-<h1 id="introduction">Introduction</h1>
+<h2 id="introduction">Introduction</h2>
 <p>This repo contains Terraform templates to help deployment of OpenShift Container Platform (OCP) 4.x on KVM VMs using
 libvirt.</p>
 <p>This project leverages the <a href="https://github.com/RedHatOfficial/ocp4-helpernode">following ansible playbook</a> to setup
@@ -133,7 +143,7 @@ helper node (bastion) for OCP deployment.</p>
 <p>Run this code from either Mac or Linux (Intel) system. For automating setup, see
 <a href="https://github.com/ocp-power-automation/ocp-upi-kvm">OCP-UPI-KVM</a></p>
 <p>:heavy_exclamation_mark: <em>This automation is intended for test/development purposes only and there is no formal support. For issues please open a GitHub issue</em></p>
-<h1 id="pre-requisites">Pre-requisites</h1>
+<h2 id="pre-requisites">Pre-requisites</h2>
 <ul>
 <li><strong>Git</strong>: Please refer to the following <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">link</a> for instructions
 on installing <code>git</code> for Linux and Mac.</li>
@@ -141,7 +151,7 @@ on installing <code>git</code> for Linux and Mac.</li>
 <li><strong>Terraform Providers</strong>: Please ensure terraform providers are built and installed on Terraform Client Machine. You can follow the <a href="https://github.com/ocp-power-automation/ocp4-upi-kvm/blob/master/docs/terraform-provider-build.md">Build Terraform Providers</a> guide.</li>
 <li><strong>libvirt</strong>: Please ensure <code>libvirt</code> is installed and configured on the KVM host. You can follow the <a href="https://github.com/ocp-power-automation/ocp4-upi-kvm/blob/master/docs/libvirt-host-setup.md">Libvirt Host setup</a> guide.</li>
 </ul>
-<h1 id="image-and-vm-requirements">Image and VM requirements</h1>
+<h2 id="image-and-vm-requirements">Image and VM requirements</h2>
 <p>For information on how to configure the images required for the automation see <a href="https://github.com/ocp-power-automation/ocp4-upi-kvm/blob/master/docs/prepare-images.md">Preparing Images for Power</a>.</p>
 <p>Following are the recommended VM configs for OpenShift nodes that will be deployed with RHCOS image.
 - Bootstrap, Master - 4 vCPUs, 16GB RAM, 120 GB Disk</p>
@@ -150,9 +160,9 @@ on installing <code>git</code> for Linux and Mac.</li>
 <p><strong><em>Increase worker vCPUs, RAM and Disk based on application requirements</em></strong></p>
 <p>Following is the recommended VM config for the helper node that will be deployed with RHEL 8.0 (or later) image.
 - Helper node (bastion) - 2vCPUs, 16GB RAM, 200 GB Disk</p>
-<h1 id="ocp-install">OCP Install</h1>
+<h2 id="ocp-install">OCP Install</h2>
 <p>Follow these <a href="https://github.com/ocp-power-automation/ocp4-upi-kvm/blob/master/docs/quickstart.md">quickstart</a> steps to kickstart OCP installation on Power KVM using libvirt.</p>
-<h1 id="contributing">Contributing</h1>
+<h2 id="contributing">Contributing</h2>
 <p>Please see the <a href="https://github.com/ocp-power-automation/ocp4-upi-kvm/blob/master/CONTRIBUTING.md">contributing doc</a> for more details.
 PRs are most welcome !!</p>
               
