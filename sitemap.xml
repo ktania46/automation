@@ -4,14 +4,6 @@
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://example.com/foo/introduction/</loc>
-     <lastmod>2020-11-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://example.com/foo/ocs_kvm/</loc>
-     <lastmod>2020-11-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://example.com/foo/powervs/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
@@ -21,18 +13,6 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://example.com/foo/powervm/</loc>
-     <lastmod>2020-11-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://example.com/foo/automation/</loc>
-     <lastmod>2020-11-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://example.com/foo/playbook/</loc>
-     <lastmod>2020-11-09</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://example.com/foo/terraform/</loc>
      <lastmod>2020-11-09</lastmod>
      <changefreq>daily</changefreq>
     </url>

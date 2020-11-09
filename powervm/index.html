@@ -9,7 +9,7 @@
   
   <link rel="canonical" href="https://example.com/foo/powervm/">
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>OCP4-UPI-PowerVM - Automation for OpenShift on IBM Power</title>
+  <title>Deploying OpenShift on PowerVM managed via PowerVC - Automation for OpenShift on IBM Power</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,7 +18,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "OCP4-UPI-PowerVM";
+    var mkdocs_page_name = "Deploying OpenShift on PowerVM managed via PowerVC";
     var mkdocs_page_input_path = "powervm.md";
     var mkdocs_page_url = "/foo/powervm/";
   </script>
@@ -52,53 +52,17 @@
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../powervs/">Deploying OpenShift on IBM Cloud Power Virtual Servers</a>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../ocs_kvm/">OCS-UPI-KVM</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../powervs/">OCP4-UPI-PowerVS</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../ocp_kvm/">OCP4-UPI-KVM</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../ocp_kvm/">Deploying OpenShift on KVM</a>
                     </li>
                 </ul>
                 <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">OCP4-UPI-PowerVM</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Deploying OpenShift on PowerVM managed via PowerVC</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#pre-requisites">Pre-requisites</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#operating-systems">Operating Systems</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#packages">Packages</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#image-and-lpar-requirements">Image and LPAR requirements</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#ocp-install">OCP Install</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#contributing">Contributing</a>
-    </li>
     </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../automation/">PowerVS_Automation</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../playbook/">OCP4-Playbooks</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../terraform/">Terraform-Provider-IBM</a>
                     </li>
                 </ul>
       </div>
@@ -122,7 +86,7 @@
     
       
     
-    <li>OCP4-UPI-PowerVM</li>
+    <li>Deploying OpenShift on PowerVM managed via PowerVC</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -133,15 +97,21 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="table-of-contents"><strong>Table of Contents</strong></h1>
+                <p><strong><h2 style="text-align:center;">Deploying OpenShift on PowerVM managed via PowerVC</h2></strong></p>
+<!-- # **Table of Contents** -->
+
 <ul>
 <li><a href="#introduction">Introduction</a></li>
-<li><a href="#pre-requisites">Pre-requisites</a></li>
+<li><a href="#pre-requisites">Pre-requisites</a><ul>
+<li><a href="#operating-systems">Operating Systems</a></li>
+<li><a href="#packages">Packages</a></li>
+</ul>
+</li>
 <li><a href="#image-and-lpar-requirements">Image and LPAR requirements</a></li>
 <li><a href="#ocp-install">OCP Install</a></li>
 <li><a href="#contributing">Contributing</a></li>
 </ul>
-<h2 id="introduction">Introduction</h2>
+<h1 id="introduction">Introduction</h1>
 <p>This repo contains Terraform templates to help deployment of OpenShift Container Platform (OCP) 4.x on PowerVM LPARs.
 This assumes PowerVC is used as the IaaS layer for managing the PowerVM LPARs.</p>
 <p>If you are using standalone PowerVM please take a look at the <a href="https://github.com/RedHatOfficial/ocp4-helpernode/blob/devel/docs/quickstart-powervm.md">following quickstart guide</a>
@@ -150,7 +120,7 @@ which uses the <a href="https://github.com/RedHatOfficial/ocp4-helpernode">ansib
 <p>Run this code from either Mac or Linux (Intel) system. For automating setup, see
 <a href="https://github.com/ocp-power-automation/ocp4-upi-powervm">OCP-UPI-PowerVM</a></p>
 <p>:heavy_exclamation_mark: <em>This automation is intended for test/development purposes only and there is no formal support. For bugs/enhancement requests etc. please open a GitHub issue</em></p>
-<h2 id="pre-requisites">Pre-requisites</h2>
+<h1 id="pre-requisites">Pre-requisites</h1>
 <p>You need to identify a remote client machine for running the automation. This could be your laptop or a VM.</p>
 <h3 id="operating-systems">Operating Systems</h3>
 <p>This code has been tested on the following x86-64 based Operating Systems:
@@ -164,7 +134,7 @@ on installing the latest Git.</li>
 <li><strong>Terraform &gt;= 0.13.0</strong>: Please refer to the <a href="https://learn.hashicorp.com/terraform/getting-started/install.html">link</a> for instructions on installing Terraform. For validating the version run <code>terraform version</code> command after install.</li>
 <li>Public internet connection for all the nodes to download the playbooks and images as part of the setup process.</li>
 </ul>
-<h2 id="image-and-lpar-requirements">Image and LPAR requirements</h2>
+<h1 id="image-and-lpar-requirements">Image and LPAR requirements</h1>
 <p>You'll need to create RedHat CoreOS (RHCOS) and RHEL 8.0 (or later) image in PowerVC. For RHCOS image creation, follow the steps mentioned
 in the following <a href="https://github.com/ocp-power-automation/ocp4-upi-powervm/blob/master/docs/coreos-image-creation.md">doc</a>.</p>
 <p>Following are the recommended LPAR configs for OpenShift nodes that will be deployed with RHCOS image.
@@ -175,9 +145,9 @@ in the following <a href="https://github.com/ocp-power-automation/ocp4-upi-power
 <p><strong><em>Increase worker vCPUs, RAM and Disk based on application requirements</em></strong></p>
 <p>Following is the recommended LPAR config for the helper node that will be deployed with RHEL 8.0 (or later) image.
 - Helper node (bastion) - 2vCPUs, 16GB RAM, 200 GB Disk</p>
-<h2 id="ocp-install">OCP Install</h2>
+<h1 id="ocp-install">OCP Install</h1>
 <p>Follow these <a href="https://github.com/ocp-power-automation/ocp4-upi-powervm/blob/master/docs/quickstart.md">quickstart</a> steps to kickstart OCP installation on PowerVM LPARs managed via PowerVC</p>
-<h2 id="contributing">Contributing</h2>
+<h1 id="contributing">Contributing</h1>
 <p>Please see the <a href="https://github.com/ocp-power-automation/ocp4-upi-powervm/blob/master/CONTRIBUTING.md">contributing doc</a> for more details.
 PRs are most welcome !!</p>
               
@@ -187,10 +157,8 @@ PRs are most welcome !!</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../automation/" class="btn btn-neutral float-right" title="PowerVS_Automation">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../ocp_kvm/" class="btn btn-neutral" title="OCP4-UPI-KVM"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ocp_kvm/" class="btn btn-neutral" title="Deploying OpenShift on KVM"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -218,8 +186,6 @@ PRs are most welcome !!</p>
       
         <span><a href="../ocp_kvm/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../automation/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
